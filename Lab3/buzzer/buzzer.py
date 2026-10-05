@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-PIN2 =        # 實體腳位？？（填你自己的腳位號碼）
+PIN2 = 13       # 實體腳位？？（填你自己的腳位號碼）
 freq = 523      # 頻率 (523Hz，大約是 C5)
 
 GPIO.setmode(GPIO.BOARD)
