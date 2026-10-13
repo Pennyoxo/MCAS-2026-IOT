@@ -5,8 +5,8 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 # 超聲波模組的 TRIG_y 與 ECHO_r 引腳設定
-TRIG_y =   # GPIO XX
-ECHO_r =   # GPIO XX
+TRIG_y = 23 # GPIO 23
+ECHO_r = 24 # GPIO 24
 
 
 # 設定引腳輸出入模式
@@ -45,12 +45,13 @@ try:
 
     while True:
         
-        # LAB4-2
-        #
-        # 請在這裡加上判斷距離程式碼，並且輸出訊息
-        # 
-        #
-        #
+        distance = measure_distance()
+        print(f"目前距離: {distance} cm")
+
+        if distance < 20:
+            print("注意！！！")
+        else:
+            print("沒事")
 
         time.sleep(0.1)  # 稍微停一下，避免畫面跳太快
 
